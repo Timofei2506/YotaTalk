@@ -2,33 +2,63 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>🎮 YotaTalk</title>
+    <title>♟️ YotaTalk</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="lichess-theme">
 
 <header>
-    <h1>💬 YotaTalk</h1>
-    <p>Играй в настольные игры, общайся и находи напарников!</p>
+    <h1>♟️ YotaTalk</h1>
+    <p>Играй в шахматы, шашки, го и другие игры онлайн</p>
 </header>
 
 <nav>
-    <a href="#home">🏠 Главная</a>
-    <a href="games.html">♟️ Игры</a>
+    <a href="#search">🔍 Найти игру</a>
+    <a href="#games">🎮 Игры</a>
     <a href="#chat">💬 Чат</a>
-    <a href="contact.html">📩 Контакты</a>
+    <a href="#profile">👤 Профиль</a>
 </nav>
 
 <main>
-    <!-- Главная -->
-    <section id="home" class="card">
-        <h2>Добро пожаловать!</h2>
-        <p>На этом сайте ты можешь:</p>
-        <ul>
-            <li>Играть в шахматы, шашки и другие настольные игры</li>
-            <li>Общаться в чате</li>
-            <li>Находить напарников для совместной игры</li>
-        </ul>
+    <!-- Поиск напарника -->
+    <section id="search" class="card">
+        <h2>🔍 Найти напарника</h2>
+        <form id="findGameForm">
+            <label for="gameType">Выберите игру:</label>
+            <select id="gameType" required>
+                <option value="chess">Шахматы</option>
+                <option value="checkers">Шашки</option>
+                <option value="go">Го</option>
+                <option value="othello">Реверси</option>
+            </select>
+            <button type="submit">Начать поиск</button>
+        </form>
+        <div id="matchFound" class="hidden">
+            Найден напарник: <strong>Player123</strong> | <button onclick="startGame()">Начать игру</button>
+        </div>
+    </section>
+
+    <!-- Игры -->
+    <section id="games" class="card">
+        <h2>🎮 Доступные игры</h2>
+        <div class="game-grid">
+            <div class="game-card" onclick="openGame('chess')">
+                <h3>♚ Шахматы</h3>
+                <p>Сыграй партию в шахматы</p>
+            </div>
+            <div class="game-card" onclick="openGame('checkers')">
+                <h3>⛀ Шашки</h3>
+                <p>Игра в классические шашки</p>
+            </div>
+            <div class="game-card" onclick="openGame('go')">
+                <h3>🌐 Го</h3>
+                <p>Игра для настоящих стратегов</p>
+            </div>
+            <div class="game-card" onclick="openGame('othello')">
+                <h3>🔁 Реверси</h3>
+                <p>Простые правила, глубокая стратегия</p>
+            </div>
+        </div>
     </section>
 
     <!-- Чат -->
