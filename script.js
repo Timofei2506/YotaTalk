@@ -1,4 +1,4 @@
-// Сообщения чата
+// Массив сообщений
 let messages = [];
 
 // Отправка сообщения
@@ -34,19 +34,13 @@ function renderMessages() {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// Поиск напарника
-document.getElementById("findGameForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    document.getElementById("matchFound").classList.remove("hidden");
-});
+// Авто-рендер при загрузке
+window.onload = () => {
+    messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+    renderMessages();
+};
 
-// Открыть игру
-function openGame(game) {
-    alert("Вы выбрали: " + game);
-    // Здесь можно перенаправить на iframe или свою реализацию
-}
-
-// Начать игру
-function startGame() {
-    alert("Игра началась!");
-}
+// Сохранение сообщений в localStorage
+setInterval(() => {
+    localStorage.setItem("chatMessages", JSON.stringify(messages));
+}, 10000); // Сохранять каждые 10 секунд
