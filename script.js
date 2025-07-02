@@ -1,4 +1,4 @@
-// Массив сообщений
+// Сообщения чата
 let messages = [];
 
 // Отправка сообщения
@@ -32,4 +32,21 @@ function renderMessages() {
 
     // Прокрутка вниз
     chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// Поиск напарника
+document.getElementById("findGameForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("matchFound").classList.remove("hidden");
+});
+
+// Открыть игру
+function openGame(game) {
+    alert("Вы выбрали: " + game);
+    // Здесь можно перенаправить на iframe или свою реализацию
+}
+
+// Начать игру
+function startGame() {
+    alert("Игра началась!");
 }
