@@ -13,60 +13,23 @@
 </header>
 
 <nav>
-    <a href="#search">🔍 Найти игру</a>
-    <a href="#games">🎮 Игры</a>
-    <a href="#chat">💬 Чат</a>
-    <a href="#profile">👤 Профиль</a>
+    <a href="index.html">🏠 Главная</a>
+    <a href="games.html">🎮 Игры</a>
+    <a href="chat.html">💬 Чат</a>
+    <a href="profile.html">👤 Профиль</a>
+    <a href="contact.html">📩 Контакты</a>
 </nav>
 
 <main>
-    <!-- Поиск напарника -->
-    <section id="search" class="card">
-        <h2>🔍 Найти напарника</h2>
-        <form id="findGameForm">
-            <label for="gameType">Выберите игру:</label>
-            <select id="gameType" required>
-                <option value="chess">Шахматы</option>
-                <option value="checkers">Шашки</option>
-                <option value="go">Го</option>
-                <option value="othello">Реверси</option>
-            </select>
-            <button type="submit">Начать поиск</button>
-        </form>
-        <div id="matchFound" class="hidden">
-            Найден напарник: <strong>Player123</strong> | <button onclick="startGame()">Начать игру</button>
-        </div>
-    </section>
-
-    <!-- Игры -->
-    <section id="games" class="card">
-        <h2>🎮 Доступные игры</h2>
-        <div class="game-grid">
-            <div class="game-card" onclick="openGame('chess')">
-                <h3>♚ Шахматы</h3>
-                <p>Сыграй партию в шахматы</p>
-            </div>
-            <div class="game-card" onclick="openGame('checkers')">
-                <h3>⛀ Шашки</h3>
-                <p>Игра в классические шашки</p>
-            </div>
-            <div class="game-card" onclick="openGame('go')">
-                <h3>🌐 Го</h3>
-                <p>Игра для настоящих стратегов</p>
-            </div>
-            <div class="game-card" onclick="openGame('othello')">
-                <h3>🔁 Реверси</h3>
-                <p>Простые правила, глубокая стратегия</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Чат -->
-    <section id="chat" class="card">
-        <h2>💬 Чат</h2>
-        <div id="messageBox"></div>
-        <input type="text" id="messageInput" placeholder="Напишите сообщение..." />
-        <button onclick="sendMessage()">Отправить</button>
+    <section class="card">
+        <h2>Добро пожаловать!</h2>
+        <p>YotaTalk — это платформа для игроков, где вы можете:</p>
+        <ul>
+            <li>Играть в разные настольные игры</li>
+            <li>Общаться в чате</li>
+            <li>Находить напарников</li>
+            <li>Повышать свой уровень</li>
+        </ul>
     </section>
 </main>
 
@@ -74,6 +37,5 @@
     <p>&copy; 2025 YotaTalk. Все права защищены.</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
