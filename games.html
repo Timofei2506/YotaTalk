@@ -2,24 +2,25 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>♟️ Игры</title>
+    <title>🎮 Игры</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="lichess-theme">
 
 <header>
-    <h1>♟️ Игры</h1>
-    <p>Выбери настольную игру и начни играть!</p>
+    <h1>🎮 Доступные игры</h1>
+    <p>Выбери игру и начни играть!</p>
 </header>
 
 <nav>
     <a href="index.html">🏠 Главная</a>
-    <a href="contact.html">📩 Контакты</a>
+    <a href="chat.html">💬 Чат</a>
+    <a href="profile.html">👤 Профиль</a>
 </nav>
 
 <main>
     <!-- Шахматы -->
-    <section class="card">
+    <section class="card game-card">
         <h2>♚ Шахматы</h2>
         <p>Сыграй партию в шахматы онлайн:</p>
         <iframe 
@@ -31,9 +32,9 @@
     </section>
 
     <!-- Шашки -->
-    <section class="card">
+    <section class="card game-card">
         <h2>⛀ Шашки</h2>
-        <p>Игра в шашки от Chess.com:</p>
+        <p>Игра в классические шашки:</p>
         <iframe 
             src="https://www.checkers.game/ " 
             width="100%" 
@@ -42,15 +43,28 @@
         </iframe>
     </section>
 
-    <!-- Настолки -->
-    <section class="card">
-        <h2>🎲 Настольные игры</h2>
-        <p>Играй в классические настольные игры:</p>
-        <ul>
-            <li><a href="https://www.backpack.tv/monopoly " target="_blank">Монополия</a></li>
-            <li><a href="https://www.backpack.tv/scrabble " target="_blank">Эрудит (Scrabble)</a></li>
-            <li><a href="https://www.cardgames.io/rummy/ " target="_blank">Руммикуб</a></li>
-        </ul>
+    <!-- Го -->
+    <section class="card game-card">
+        <h2>🌐 Го</h2>
+        <p>Игра для настоящих стратегов:</p>
+        <iframe 
+            src="https://online-go.com/ " 
+            width="100%" 
+            height="500" 
+            frameborder="0">
+        </iframe>
+    </section>
+
+    <!-- Реверси -->
+    <section class="card game-card">
+        <h2>🔁 Реверси</h2>
+        <p>Простые правила, глубокая стратегия:</p>
+        <iframe 
+            src="https://www.cardgames.io/reversi/ " 
+            width="100%" 
+            height="500" 
+            frameborder="0">
+        </iframe>
     </section>
 </main>
 
