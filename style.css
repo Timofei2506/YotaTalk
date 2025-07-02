@@ -5,24 +5,27 @@ body {
     padding: 0;
     background-color: #1e1e2f;
     color: #fff;
-    line-height: 1.6;
+}
+
+.lichess-theme {
+    background: linear-gradient(to bottom, #111, #1e1e2f);
 }
 
 /* Шапка */
 header {
-    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    background: linear-gradient(90deg, #2b5876, #4e54c8);
     text-align: center;
-    padding: 3em 1em 2em;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 2em 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 0;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-top: 0.5em;
     color: #ddd;
 }
@@ -53,17 +56,17 @@ nav a:hover {
 
 /* Основной контент */
 main {
-    padding: 3em 1em;
+    padding: 2em 1em;
     max-width: 1000px;
     margin: auto;
 }
 
 .card {
     background-color: #2a2a3a;
-    border-radius: 12px;
-    padding: 2em;
-    margin-bottom: 2.5em;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -71,29 +74,64 @@ main {
     transform: translateY(-5px);
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+/* Форма поиска */
+#findGameForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #4e54c8;
-    color: white;
+#findGameForm select,
+#findGameForm button {
+    padding: 10px;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
+}
+
+#findGameForm button {
+    background-color: #4e54c8;
+    color: white;
     cursor: pointer;
 }
 
-button:hover {
+#findGameForm button:hover {
     background-color: #3b3b7d;
 }
 
+#matchFound {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #2a2a3a;
+    border-left: 5px solid #4e54c8;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Игры */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5em;
+}
+
+.game-card {
+    background-color: #1e1e2f;
+    border-radius: 10px;
+    padding: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.03);
+}
+
+/* Чат */
 #messageBox {
     background-color: #1e1e2f;
     border-radius: 10px;
@@ -110,4 +148,12 @@ button:hover {
     margin-bottom: 0.7em;
     border-left: 5px solid #4e54c8;
     border-radius: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
 }
