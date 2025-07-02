@@ -2,14 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>🕹️ Игры</title>
+    <title>♟️ Игры</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>🕹️ Игры</h1>
-    <p>Выбери игру и найди напарника для совместной игры!</p>
+    <h1>♟️ Игры</h1>
+    <p>Выбери настольную игру и начни играть!</p>
 </header>
 
 <nav>
@@ -18,18 +18,39 @@
 </nav>
 
 <main>
-    <section class="games-list">
-        <h2>Популярные игры</h2>
-        <ul>
-            <li>Counter-Strike 2</li>
-            <li>Valorant</li>
-            <li>Minecraft</li>
-            <li>Among Us</li>
-            <li>Call of Duty</li>
-            <li>League of Legends</li>
-        </ul>
+    <!-- Шахматы -->
+    <section class="card">
+        <h2>♚ Шахматы</h2>
+        <p>Сыграй партию в шахматы онлайн:</p>
+        <iframe 
+            src="https://www.chess.com/play/computer " 
+            width="100%" 
+            height="500" 
+            frameborder="0">
+        </iframe>
+    </section>
 
-        <p>Если ты хочешь добавить свою игру или создать тему — напиши в разделе "Контакты".</p>
+    <!-- Шашки -->
+    <section class="card">
+        <h2>⛀ Шашки</h2>
+        <p>Игра в шашки от Chess.com:</p>
+        <iframe 
+            src="https://www.checkers.game/ " 
+            width="100%" 
+            height="500" 
+            frameborder="0">
+        </iframe>
+    </section>
+
+    <!-- Настолки -->
+    <section class="card">
+        <h2>🎲 Настольные игры</h2>
+        <p>Играй в классические настольные игры:</p>
+        <ul>
+            <li><a href="https://www.backpack.tv/monopoly " target="_blank">Монополия</a></li>
+            <li><a href="https://www.backpack.tv/scrabble " target="_blank">Эрудит (Scrabble)</a></li>
+            <li><a href="https://www.cardgames.io/rummy/ " target="_blank">Руммикуб</a></li>
+        </ul>
     </section>
 </main>
 
