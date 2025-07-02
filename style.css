@@ -1,0 +1,57 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2f;
+    color: #fff;
+}
+
+header {
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    text-align: center;
+    padding: 2em 1em;
+}
+
+nav {
+    background-color: #3b3b4d;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2em;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.form-section, .chat-section, .games-list, .contact-info {
+    background-color: #2a2a3a;
+    padding: 1.5em;
+    border-radius: 10px;
+    margin-bottom: 2em;
+}
+
+.games-list ul {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #2c2c3d;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
