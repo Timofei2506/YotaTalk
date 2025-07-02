@@ -1,57 +1,118 @@
+/* Основные стили */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #1e1e2f;
     color: #fff;
+    line-height: 1.6;
 }
 
+/* Шапка */
 header {
-    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
     text-align: center;
-    padding: 2em 1em;
+    padding: 3em 1em 2em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+    color: #ddd;
+}
+
+/* Навигация */
 nav {
-    background-color: #3b3b4d;
+    background-color: #2a2a3a;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 1em;
+    gap: 30px;
+    padding: 1em 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+nav a:hover {
+    color: #8f94fb;
+}
+
+/* Основной контент */
 main {
-    padding: 2em;
+    padding: 3em 1em;
     max-width: 1000px;
     margin: auto;
 }
 
-.intro {
-    text-align: center;
-    margin-bottom: 2em;
+/* Заголовки */
+h2, h3 {
+    color: #ffffff;
+    margin-bottom: 0.5em;
 }
 
-.form-section, .chat-section, .games-list, .contact-info {
+/* Блоки с контентом */
+.card {
     background-color: #2a2a3a;
-    padding: 1.5em;
-    border-radius: 10px;
-    margin-bottom: 2em;
+    border-radius: 12px;
+    padding: 2em;
+    margin-bottom: 2.5em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
-.games-list ul {
-    list-style-type: circle;
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Форма через Tally */
+iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 1em;
+}
+
+/* Таблица ответов */
+.responses iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 1em;
+}
+
+/* Контакты и игры */
+ul {
     padding-left: 20px;
 }
 
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Подвал */
 footer {
-    background-color: #2c2c3d;
+    background-color: #222230;
     text-align: center;
-    padding: 1em;
-    margin-top: 2em;
+    padding: 2em 1em;
+    color: #aaa;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
 }
